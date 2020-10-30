@@ -11,7 +11,7 @@ class App extends React.Component {
     }
   }
 
-  buttonClick = () => {
+  buttonClick = (event) => {
     console.log(this.state.clickState);
     if (this.state.clickState === true) {
       this.setState({ bgColor: '#4CAf50'});

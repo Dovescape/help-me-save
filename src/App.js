@@ -1,16 +1,36 @@
 import React from 'react';
 import './App.css';
+import Buttons from './Buttons';
 
 class App extends React.Component {
-  render() {
+  constructor() {
+    super()
+    this.state ={
+      bgColor: '',
+      clickState: true
+    }
+  }
+
+  buttonClick = () => {
+    console.log(this.state.clickState);
+    if (this.state.clickState === true) {
+      this.setState({ bgColor: '#4CAf50'});
+      this.setState({ clickState: false });
+    } else {
+      this.setState({ bgColor: '' });
+      this.setState({ clickState: true });
+    }
+    
+  }
+
+  render(){
     return (
-      <div className="header" id="header">
-        <h1>Welcome! What would you like to save for?</h1>
-        <div>
-          <button className="button">Let's Save!</button>
-        </div>
+      <div>
+        <Buttons 
+          buttonClick={this.buttonClick}
+          bgColor={this.state.bgColor}/>
       </div>
-    );
+    )
   }
 }
 

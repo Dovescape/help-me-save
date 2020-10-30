@@ -1,34 +1,15 @@
 import React from 'react';
 import './App.css';
-import Buttons from './Buttons';
+//import Button from './Button';
+import ButtonContainer from './ButtonContainer';
+//import Travelbutton from './Travelbutton';
+
 
 class App extends React.Component {
-  constructor() {
-    super()
-    this.state ={
-      bgColor: '',
-      clickState: true
-    }
-  }
-
-  buttonClick = (event) => {
-    console.log(this.state.clickState);
-    if (this.state.clickState === true) {
-      this.setState({ bgColor: '#4CAf50'});
-      this.setState({ clickState: false });
-    } else {
-      this.setState({ bgColor: '' });
-      this.setState({ clickState: true });
-    }
-    
-  }
-
-  render(){
+  render() {
     return (
       <div>
-        <Buttons 
-          buttonClick={this.buttonClick}
-          bgColor={this.state.bgColor}/>
+        <ButtonContainer />
       </div>
     )
   }

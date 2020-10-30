@@ -1,0 +1,37 @@
+import React from 'react';
+import './Button.css';
+
+class Button extends React.Component {
+  constructor() {
+    super()
+    this.state ={
+      bgColor: '',
+      clickState: true
+    }
+  }
+
+  buttonClick = () => {
+    if (this.state.clickState === true) {
+      this.setState({ bgColor: '#4CAf50'});
+      this.setState({ clickState: false });
+    } else {
+      this.setState({ bgColor: '' });
+      this.setState({ clickState: true });
+    }
+    
+  }
+
+  render() {
+    return (
+      <div>
+        <button
+          className="button"
+          style={{backgroundColor: this.state.bgColor}}
+          onClick={this.buttonClick}>{ this.props.text }</button>
+      </div>
+    )
+  }
+}
+
+
+export default Button;

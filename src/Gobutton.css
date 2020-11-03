@@ -1,0 +1,20 @@
+
+
+.form-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.inputs{
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+label{
+  display: inline-block;
+  width: 75px;
+}
+
+

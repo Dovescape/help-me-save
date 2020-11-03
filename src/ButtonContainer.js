@@ -1,6 +1,7 @@
 import React from 'react';
 import './ButtonContainer.css';
 import Button from './Button';
+import Gobutton from './Gobutton';
 
 const ButtonContainer = () => {
   return (
@@ -19,6 +20,9 @@ const ButtonContainer = () => {
           <Button text="Pet" />
           <Button text="Electronic" />
         </div>
+      </div>
+      <div className="gobutton">
+        <Gobutton/>
       </div>
     </div>
   )

@@ -2,6 +2,13 @@ import React from 'react';
 import Modal from 'react-awesome-modal';
 import './Gobutton.css';
 
+
+const selectedButtons = ({Button}) => {
+ //pull what buttons have clickState===true
+}
+
+
+
 class Gobutton extends React.Component {
   constructor(props) {
     super(props);

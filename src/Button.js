@@ -6,17 +6,19 @@ class Button extends React.Component {
     super()
     this.state ={
       bgColor: '',
-      clickState: true
+      clickState: false
     }
   }
 
   buttonClick = () => {
+    this.setState({
+      clickState: this.state.clickState = !this.state.clickState
+    });
+    console.log(this.state.clickState);
     if (this.state.clickState === true) {
       this.setState({ bgColor: '#4CAf50'});
-      this.setState({ clickState: false });
     } else {
       this.setState({ bgColor: '' });
-      this.setState({ clickState: true });
     }
     
   }
